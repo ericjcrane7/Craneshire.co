@@ -97,13 +97,22 @@ section{padding:128px 0}
 .head{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;align-items:end;margin-bottom:64px}
 .head p{color:var(--muted);font-size:1.17rem;margin:0}
 
-/* Services: an editorial list, not a card grid */
-.services{display:grid;grid-template-columns:1fr 1fr;column-gap:72px}
-.svc{padding:34px 0 36px;border-top:1px solid var(--line);position:relative}
-.svc::before{content:"";position:absolute;left:0;top:-1px;height:2px;width:0;background:var(--ember-2);transition:width .5s cubic-bezier(.2,.7,.2,1)}
-.svc:hover::before{width:100%}
-.svc h3{margin-bottom:10px}
-.svc p{color:var(--muted);margin:0 0 14px}
+/* What we make: proven in Crane Course, then where it could go */
+.pairs-head,.pair{display:grid;grid-template-columns:200px 1fr 44px 1fr;column-gap:28px}
+.pairs-head{font:600 .74rem/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#a85a24;padding-bottom:16px}
+.pairs{list-style:none;margin:0;padding:0}
+.pair{align-items:baseline;padding:26px 0;border-top:1px solid var(--line);position:relative}
+.pair:last-child{border-bottom:1px solid var(--line)}
+.pair::before{content:"";position:absolute;left:0;top:-1px;height:2px;width:0;background:var(--ember-2);transition:width .5s cubic-bezier(.2,.7,.2,1)}
+.pair:hover::before{width:100%}
+.pair h3{font-size:1.22rem}
+.pair .done{margin:0;color:var(--muted);font-size:1.02rem}
+.pair .to{color:var(--ember-2);font-size:1.3rem;text-align:center;transition:transform .3s}
+.pair:hover .to{transform:translateX(5px)}
+.pair .could{margin:0;font:500 1.14rem/1.45 var(--serif);color:var(--ink)}
+.pair .lbl{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.think{margin-top:56px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 32px}
+.think p{margin:0;font:italic 500 clamp(1.9rem,3.4vw,2.7rem)/1.15 var(--serif);color:var(--ink)}
 
 /* How we build: the app lifecycle */
 .thread{background:linear-gradient(180deg,#14213a 0%,#1a2b4b 100%);color:var(--cream);position:relative;overflow:hidden}
@@ -137,20 +146,38 @@ section{padding:128px 0}
 .stage p{margin:0;color:var(--cream-2);font-size:1.1rem;max-width:34em;transition:opacity .3s}
 .stage.fade p,.stage.fade h3{opacity:.15}
 
-/* Our work: Crane Course */
-.work .grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.work .lede2{color:var(--muted);font-size:1.17rem;margin:26px 0 34px;max-width:32em}
+/* Our work: Crane Course, Off Course and where to get it */
+.work{background:var(--paper-2)}
+.work .grid{display:grid;grid-template-columns:1.2fr .8fr;gap:80px;align-items:center}
+.app-title{display:flex;align-items:center;gap:20px}
+.app-title img{width:64px;height:64px;border-radius:15px;box-shadow:0 8px 20px rgba(20,33,58,.22)}
+.work .lede2{color:var(--muted);font-size:1.17rem;margin:26px 0 22px;max-width:32em}
+.facts{list-style:none;margin:0;padding:0;max-width:32em}
+.facts li{padding:16px 0;border-top:1px solid var(--line)}
+.facts b{display:block;font:600 1.12rem/1.3 var(--serif);color:var(--ink);margin-bottom:2px}
+.facts span{display:block;color:var(--muted);font-size:1.02rem}
+.phone{margin:0;justify-self:center;width:min(100%,300px);padding:9px;border-radius:46px;background:#0b1222;box-shadow:0 30px 60px rgba(20,33,58,.3)}
+.phone img{width:100%;height:auto;border-radius:38px}
+.game{margin-top:110px;display:grid;grid-template-columns:1.4fr 1fr;gap:56px;align-items:center}
+.game figure{margin:0}
+.game img{width:100%;height:auto;border-radius:24px;box-shadow:0 24px 50px rgba(20,33,58,.22)}
+.game figcaption{margin-top:12px;font-size:.84rem;line-height:1.5;color:var(--muted)}
+.game h3{font-size:clamp(1.7rem,2.6vw,2.2rem);margin-bottom:14px}
+.game p{color:var(--muted);font-size:1.1rem;margin:0}
+.get{margin-top:96px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.store{display:flex;justify-content:space-between;align-items:center;gap:24px;background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:32px}
+.store small{display:block;font:600 .76rem/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#a85a24;margin-bottom:12px}
+.store h3{font-size:1.5rem;margin-bottom:18px}
+.store p{color:var(--muted);margin:0;font-size:1.02rem;max-width:26em}
 .btn-dark{background:var(--night);color:var(--cream)}
 .btn-dark:hover{background:var(--dusk);transform:translateY(-1px)}
-.btn-line{color:var(--ink);border:1.5px solid #cbbd9f}
-.btn-line:hover{border-color:var(--ink)}
-.showcase{margin:0;background:var(--paper-2);border:1px solid var(--line);border-radius:28px;padding:40px}
-.showcase .icon{width:96px;height:96px;border-radius:22px;box-shadow:0 10px 26px rgba(20,33,58,.22);margin-bottom:12px}
-.facts{list-style:none;margin:0;padding:0}
-.facts li{padding:18px 0;border-bottom:1px solid var(--line)}
-.facts li:last-child{border-bottom:0;padding-bottom:0}
-.facts b{display:block;font:600 1.15rem/1.3 var(--serif);color:var(--ink);margin-bottom:4px}
-.facts span{display:block;color:var(--muted);font-size:1.02rem}
+.qr{margin:0;text-align:center;flex:none}
+.qr img{width:148px;height:148px;border-radius:12px;border:1px solid var(--line)}
+.qr figcaption{margin-top:8px;font-size:.8rem;color:var(--muted)}
+.help{margin:28px 0 0;color:var(--muted)}
+.help a{color:var(--ink)}
+/* A phone can't scan its own screen, so the code shows only on larger screens with a mouse. */
+@media (max-width:860px),(hover:none){.qr{display:none}}
 
 /* Approach */
 .why .grid{display:grid;grid-template-columns:1.05fr 1fr;gap:80px;align-items:start}
@@ -180,7 +207,6 @@ section{padding:128px 0}
 .contact h2{font-size:clamp(2.4rem,5vw,3.9rem);color:var(--cream)}
 .contact h2 em{color:var(--ember)}
 .contact p{color:var(--cream-2);font-size:1.18rem;margin-top:20px}
-.contact p a{color:var(--ember)}
 .night{position:absolute;inset:auto 0 0 0;width:100%;height:100%;z-index:-1}
 .night .stars circle{fill:#fff6e4;animation:twinkle 7s ease-in-out infinite}
 @keyframes twinkle{0%,100%{opacity:.85}50%{opacity:.25}}
@@ -210,10 +236,15 @@ footer .privacy a{color:var(--cream)}
   .steps::before{transform:scaleX(1)}
 }
 @media (max-width:1060px){
-  .head,.thread .grid,.why .grid,.contact .wrap,.work .grid{grid-template-columns:1fr}
-  .work .grid{gap:48px}
+  .head,.thread .grid,.why .grid,.contact .wrap,.work .grid,.game,.get{grid-template-columns:1fr}
+  .work .grid{gap:56px}
+  .game{margin-top:80px;gap:28px}
+  .get{margin-top:64px}
   .head{gap:20px;margin-bottom:44px}
-  .services{grid-template-columns:1fr}
+  .pairs-head{display:none}
+  .pair{grid-template-columns:1fr;row-gap:6px}
+  .pair .to{display:none}
+  .pair .lbl{position:static;width:auto;height:auto;clip:auto;margin:0;font:600 .98rem var(--sans);color:#a85a24}
   .steps{grid-template-columns:1fr 1fr;row-gap:44px}
   .steps::before{display:none}
   section{padding:96px 0}
@@ -233,7 +264,8 @@ footer .privacy a{color:var(--cream)}
   .btn{justify-content:center;width:100%}
   nav .btn{width:auto}
   .steps{grid-template-columns:1fr}
-  .showcase{padding:28px 22px}
+  .store{padding:26px 22px}
+  .app-title img{width:52px;height:52px;border-radius:12px}
   .contact .wrap{padding-bottom:200px}
   .hero-copy{padding-bottom:420px}
   .land{height:440px}
@@ -293,47 +325,77 @@ footer .privacy a{color:var(--cream)}
     </div>
   </section>
 
-  <!-- Our work: Crane Course -->
+  <!-- Our work: Crane Course, its built-in game, and where to get it -->
   <section class="work" id="work">
-    <div class="wrap grid">
-      <div>
-        <div class="kicker">Our Work</div>
-        <h2 class="reveal">Crane Course</h2>
-        <p class="reveal d1 lede2">Our first app is a golf companion for iPhone, Apple Watch and Android. It shows front, center and back yardages to the green from your device's own Global Positioning System, keeps working offline once a course is downloaded, and carries a small 3D game, Off Course, for the moments between rounds.</p>
-        <div class="cta reveal d2">
-          <a class="btn btn-dark" href="https://apps.apple.com/us/app/crane-course/id6819049087">View on the App Store <span class="arr">→</span></a>
-          <a class="btn btn-line" href="https://cranecourse.github.io/crane-course-support/">Support and privacy</a>
+    <div class="wrap">
+      <div class="grid">
+        <div>
+          <div class="kicker">Our Work</div>
+          <h2 class="reveal app-title"><img src="images/crane-course-icon.png" width="64" height="64" alt="">Crane Course</h2>
+          <p class="reveal d1 lede2">Our first app is a golf companion for iPhone, Apple Watch and Android. It shows front, center and back yardages to the green from your device's own Global Positioning System, and keeps working offline once a course is downloaded.</p>
+          <ul class="facts reveal d2">
+            <li><b>Phone and watch together</b><span>The watch uses its own location, so the phone can stay in the cart.</span></li>
+            <li><b>Honest numbers</b><span>Reports location accuracy plainly and hides yardages when you're away from the course.</span></li>
+            <li><b>No account, advertising or tracking</b><span>Scores and rounds stay on your phone and watch.</span></li>
+          </ul>
+        </div>
+        <figure class="phone reveal d1"><img src="images/crane-course-gps.jpg" width="506" height="1100" loading="lazy" alt="Crane Course on iPhone: hole 1 at Lakeside Country Club, with front, center and back yardages over the aerial map"></figure>
+      </div>
+
+      <div class="game">
+        <figure class="reveal"><img src="images/off-course-hole-16.jpg" width="1600" height="736" loading="lazy" alt="Off Course: the 16th hole at Lakeside Country Club in 3D, with the pond beside the fairway">
+          <figcaption>Hole 16 at Lakeside, in Off Course. Course shapes &copy; OpenStreetMap contributors; aerial imagery from the U.S. Department of Agriculture; elevation from the U.S. Geological Survey.</figcaption></figure>
+        <div class="reveal d1">
+          <div class="kicker">Built Into Crane Course</div>
+          <h3>Off Course, a game while you wait.</h3>
+          <p>A 3D golf game of Lakeside Country Club in Penn Yan, New York. All 18 holes are built from the real course's shapes, aerial imagery and laser elevation surveys. It comes free with the app, needs no extra download and plays offline.</p>
         </div>
       </div>
-      <figure class="showcase reveal d1">
-        <img class="icon" src="images/crane-course-icon.png" width="128" height="128" alt="The Crane Course app icon">
-        <ul class="facts">
-          <li><b>iPhone and Apple Watch</b><span>Available now on the App Store. The watch uses its own location, so the phone can stay in the cart.</span></li>
-          <li><b>Android and Wear OS</b><span>Rebuilt natively to match, now in testing on Google Play.</span></li>
-          <li><b>Honest numbers</b><span>Reports location accuracy plainly and hides yardages when you're away from the course.</span></li>
-          <li><b>No account, advertising or tracking</b><span>Scores and rounds stay on your phone and watch.</span></li>
-        </ul>
-      </figure>
+
+      <div class="get">
+        <div class="store reveal">
+          <div>
+            <small>iPhone and Apple Watch</small>
+            <h3>On the App Store now</h3>
+            <a class="btn btn-dark" href="https://apps.apple.com/us/app/crane-course/id6819049087">View on the App Store <span class="arr">→</span></a>
+          </div>
+          <figure class="qr"><img src="images/qr-app-store.svg" width="148" height="148" alt="QR code linking to Crane Course on the App Store"><figcaption>Scan with your iPhone camera</figcaption></figure>
+        </div>
+        <div class="store reveal d1">
+          <div>
+            <small>Android and Wear OS</small>
+            <h3>Coming to Google Play</h3>
+            <p>Rebuilt natively to match the iPhone app, Off Course included, and in testing now. The link will appear here when it's released.</p>
+          </div>
+        </div>
+      </div>
+      <p class="help reveal">Questions about Crane Course? Visit its <a href="https://cranecourse.github.io/crane-course-support/">support and privacy site</a>.</p>
     </div>
   </section>
 
-  <!-- What we make -->
+  <!-- What we make: what Crane Course already does, and where the same work could go -->
   <section id="make">
     <div class="wrap">
       <div class="head">
         <div>
           <div class="kicker">What We Make</div>
-          <h2 class="reveal">Native apps, built for each device they run on.</h2>
+          <h2 class="reveal">Built for one course. Ready for yours.</h2>
         </div>
-        <p class="reveal d1">Golf is where we started, not where we stop. Every app gets the same care: designed for the screen it lives on, careful with your data, and tested where people really use it.</p>
+        <p class="reveal d1">We make native apps for iPhone, Apple Watch, Android and Wear OS. Below is what Crane Course already does, and what the same work could do for you. Picture your winery, trail, shop or event in place of the golf course.</p>
       </div>
-      <div class="services">
-        <article class="svc reveal"><h3>iPhone apps</h3><p>Written in Swift and SwiftUI, Apple's own tools, so the app looks and behaves the way iPhone owners expect.</p></article>
-        <article class="svc reveal d1"><h3>Apple Watch apps</h3><p>Large, readable numbers you can take in at a glance, with the watch working on its own when the phone is out of reach.</p></article>
-        <article class="svc reveal"><h3>Android phone apps</h3><p>Written in Kotlin with Jetpack Compose, Google's own tools, and built to match the iPhone version feature for feature.</p></article>
-        <article class="svc reveal d1"><h3>Wear OS apps</h3><p>The same glanceable design on Android watches, kept in step with the phone over the watch's own connection.</p></article>
-        <article class="svc reveal"><h3>Maps, location and offline use</h3><p>Maps, aerial imagery and location that keep working without a signal, with accuracy reported honestly.</p></article>
-        <article class="svc reveal d1"><h3>App Store and Google Play launches</h3><p>Store listings, screenshots, privacy answers and review, handled carefully so the app reaches people smoothly.</p></article>
+      <div class="pairs-head" aria-hidden="true"><span></span><span>In Crane Course today</span><span></span><span>In your app</span></div>
+      <ul class="pairs">
+        <li class="pair reveal"><h3>Location</h3><p class="done"><span class="lbl">In Crane Course today: </span>Yardages to the green from the phone's own location, even with no signal.</p><span class="to" aria-hidden="true">→</span><p class="could"><span class="lbl">In your app: </span>Directions to the next stop on a wine tour, even where the signal drops.</p></li>
+        <li class="pair reveal d1"><h3>Phone and watch</h3><p class="done"><span class="lbl">In Crane Course today: </span>The round on your wrist, kept in step with the phone in the cart.</p><span class="to" aria-hidden="true">→</span><p class="could"><span class="lbl">In your app: </span>A checklist, timer or tally on the wrist while your hands are busy.</p></li>
+        <li class="pair reveal"><h3>Maps</h3><p class="done"><span class="lbl">In Crane Course today: </span>Aerial maps of every hole, downloaded once and ready offline.</p><span class="to" aria-hidden="true">→</span><p class="could"><span class="lbl">In your app: </span>Your farm, campus or event grounds, mapped and in every visitor's pocket.</p></li>
+        <li class="pair reveal d1"><h3>Live information</h3><p class="done"><span class="lbl">In Crane Course today: </span>Wind from Apple Weather, turned to match the hole you're playing.</p><span class="to" aria-hidden="true">→</span><p class="could"><span class="lbl">In your app: </span>Weather, schedules or your own numbers, shown at the moment they matter.</p></li>
+        <li class="pair reveal"><h3>3D worlds</h3><p class="done"><span class="lbl">In Crane Course today: </span>Off Course, a game built from real elevation and aerial imagery.</p><span class="to" aria-hidden="true">→</span><p class="could"><span class="lbl">In your app: </span>A walk through a place before anyone sets foot there, built from the same real data.</p></li>
+        <li class="pair reveal d1"><h3>Data and privacy</h3><p class="done"><span class="lbl">In Crane Course today: </span>No account or advertising, scores kept on the device, and privacy answers filed with both stores.</p><span class="to" aria-hidden="true">→</span><p class="could"><span class="lbl">In your app: </span>Data handled the way your app needs, and disclosed plainly in both stores.</p></li>
+        <li class="pair reveal"><h3>Both stores</h3><p class="done"><span class="lbl">In Crane Course today: </span>Live on the App Store, with Google Play in testing.</p><span class="to" aria-hidden="true">→</span><p class="could"><span class="lbl">In your app: </span>Your app on iPhone and Android, with listings, privacy answers and review handled.</p></li>
+      </ul>
+      <div class="think reveal">
+        <p>So, what would yours do?</p>
+        <a class="btn btn-dark" href="#contact">Tell us about it <span class="arr">→</span></a>
       </div>
     </div>
   </section>
@@ -359,13 +421,13 @@ footer .privacy a{color:var(--cream)}
     <div class="wrap grid">
       <div>
         <div class="kicker">Why Craneshire</div>
-        <p class="quote reveal">An app should respect your <em>time</em> and your <em>attention</em>, and always tell you the truth.</p>
+        <p class="quote reveal">We build applications that <em>meet your needs.</em></p>
         <p class="sig reveal d1"><b>Eric Crane</b>, founder and U.S. Air Force veteran</p>
       </div>
       <ul class="pillars">
         <li class="reveal"><span class="n">i</span><div><h3>Plain and readable</h3><p>Large type, clear words and screens that make sense the first time.</p></div></li>
         <li class="reveal d1"><span class="n">ii</span><div><h3>Native to every device</h3><p>Apple's tools on Apple devices and Google's on Android, never a compromise that feels foreign on both.</p></div></li>
-        <li class="reveal d2"><span class="n">iii</span><div><h3>Private by design</h3><p>Collect only what the app needs, keep it on the device where we can, and say so plainly.</p></div></li>
+        <li class="reveal d2"><span class="n">iii</span><div><h3>Honest about data</h3><p>Your app collects what it needs, and says so plainly in both stores.</p></div></li>
         <li class="reveal d3"><span class="n">iv</span><div><h3>Looked after</h3><p>Tested on real devices, updated as platforms change, and fixed when users tell us something is wrong.</p></div></li>
       </ul>
     </div>
@@ -396,7 +458,7 @@ footer .privacy a{color:var(--cream)}
     <div class="wrap">
       <div>
         <h2 class="reveal">Let's make something <em>useful.</em></h2>
-        <p class="reveal d1">Tell us about the app you have in mind, even if it's just a hunch. I read every message myself and reply within two business days. For help with Crane Course, the <a href="https://cranecourse.github.io/crane-course-support/">support site</a> is the quickest route.</p>
+        <p class="reveal d1">Tell us about the app you have in mind, even if it's just a hunch. I read every message myself and reply within two business days.</p>
       </div>
       <div class="mail reveal d2">
         <small>Email Eric Directly</small>
