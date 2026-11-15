@@ -5,6 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Craneshire | Apps for iPhone, Apple Watch and Android</title>
 <meta name="description" content="Craneshire is a small independent studio that designs and builds native apps for iPhone, Apple Watch, Android and Wear OS. Makers of Crane Course and Off Course. Owned by a U.S. Air Force veteran in New York's Finger Lakes.">
+<link rel="canonical" href="https://craneshire.co/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Craneshire">
+<meta property="og:url" content="https://craneshire.co/">
+<meta property="og:title" content="Craneshire | Apps for iPhone, Apple Watch and Android">
+<meta property="og:description" content="A small independent studio that designs and builds native apps for iPhone, Apple Watch, Android and Wear OS. Makers of Crane Course and Off Course.">
+<meta property="og:image" content="https://craneshire.co/images/share.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Craneshire, independent app studio: three cranes fly over a lake at dusk beside the words Applications to suit your needs.">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="logo/craneshire-mark.svg" type="image/svg+xml">
 <link rel="icon" href="logo/craneshire-mark-32.png" sizes="32x32">
 <link rel="apple-touch-icon" href="logo/craneshire-square-180.png">
@@ -19,6 +30,7 @@
   --paper:#faf6ee; --paper-2:#f2ebdd; --ink:#1b2130; --muted:#525d6c; --line:#e3d9c6;
   --cream:#f7f1e6; --cream-2:rgba(247,241,230,.8);
   --crown:#a8392c;
+  --ember-ink:#9a4f1c; /* ember for text on cream: 5.0 to 1 on --paper-2, 5.6 on --paper */
   --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
   --sans:"Source Sans 3",-apple-system,"Segoe UI",Helvetica,Arial,sans-serif;
   --mono:"Source Code Pro",ui-monospace,Menlo,monospace;
@@ -35,11 +47,12 @@ h2{font-size:clamp(2.15rem,4.2vw,3.35rem)}
 h3{font-size:1.42rem;line-height:1.22;font-weight:600}
 p{margin:0 0 16px}
 em{font-style:italic}
-.kicker{font:600 .8rem/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#a85a24;display:inline-flex;align-items:center;gap:12px;margin-bottom:20px}
+.kicker{font:600 .8rem/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--ember-ink);display:inline-flex;align-items:center;gap:12px;margin-bottom:20px}
 .kicker::before{content:"";width:26px;height:1.5px;background:currentColor}
 .skip{position:absolute;left:-999px;top:8px;background:#fff;color:var(--ink);padding:10px 14px;border-radius:8px;z-index:100}
 .skip:focus{left:12px}
-:focus-visible{outline:3px solid var(--ember);outline-offset:3px;border-radius:6px}
+:focus-visible{outline:3px solid var(--night);outline-offset:3px;border-radius:6px}
+header :focus-visible,.hero :focus-visible,.thread :focus-visible,.contact :focus-visible,footer :focus-visible,.skip:focus-visible{outline-color:var(--ember)}
 
 /* ---------- Buttons ---------- */
 .btn{display:inline-flex;align-items:center;gap:10px;font:600 1.02rem/1 var(--sans);padding:18px 28px;border-radius:999px;text-decoration:none;transition:transform .2s,background .2s,box-shadow .2s,color .2s,border-color .2s}
@@ -86,7 +99,8 @@ nav .btn{padding:13px 22px;font-size:.98rem}
 .hero .kicker{color:var(--ember)}
 .hero h1{font-size:clamp(2.6rem,5.2vw,4.8rem);font-weight:540;text-shadow:0 2px 24px rgba(10,16,30,.35)}
 .hero h1 em{color:var(--ember);font-weight:500;white-space:nowrap}
-.hero .lede{font-size:1.24rem;color:var(--cream-2);max-width:30em;margin:26px 0 36px;text-shadow:0 1px 14px rgba(10,16,30,.5)}
+.hero .lede{font-size:1.24rem;color:var(--cream-2);max-width:30em;margin:26px 0 36px;text-shadow:0 1px 14px rgba(10,16,30,.5);position:relative}
+@media (min-width:1061px){.hero .lede::before{content:"";position:absolute;inset:-64px -250px -64px -180px;z-index:-1;pointer-events:none;background:radial-gradient(closest-side,rgba(29,46,79,.84) 0,rgba(29,46,79,.78) 58%,rgba(29,46,79,.34) 82%,rgba(29,46,79,0) 100%)}}
 .cta{display:flex;flex-wrap:wrap;gap:14px}
 .trust{display:flex;flex-wrap:wrap;gap:8px 22px;margin-top:40px;color:var(--cream-2);font-size:.97rem}
 .trust span{display:inline-flex;align-items:center;gap:9px}
@@ -99,7 +113,7 @@ section{padding:128px 0}
 
 /* What we make: proven in our apps, then where it could go */
 .pairs-head,.pair{display:grid;grid-template-columns:200px 1fr 44px 1fr;column-gap:28px}
-.pairs-head{font:600 .74rem/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#a85a24;padding-bottom:16px}
+.pairs-head{font:600 .74rem/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--ember-ink);padding-bottom:16px}
 .pairs{list-style:none;margin:0;padding:0}
 .pair{align-items:baseline;padding:26px 0;border-top:1px solid var(--line);position:relative}
 .pair:last-child{border-bottom:1px solid var(--line)}
@@ -170,7 +184,7 @@ section{padding:128px 0}
 .phone img{width:100%;height:auto;border-radius:38px}
 .get{margin-top:80px;display:grid;grid-template-columns:1fr 1fr;gap:24px}
 .store{display:flex;justify-content:space-between;align-items:center;gap:24px;background:var(--paper);border:1px solid var(--line);border-radius:24px;padding:32px}
-.store small{display:block;font:600 .76rem/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:#a85a24;margin-bottom:12px}
+.store small{display:block;font:600 .76rem/1 var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--ember-ink);margin-bottom:12px}
 .store h3{font-size:1.5rem;margin-bottom:18px}
 .store p{color:var(--muted);margin:0;font-size:1.02rem;max-width:26em}
 .btn-dark{background:var(--night);color:var(--cream)}
@@ -186,13 +200,13 @@ section{padding:128px 0}
 /* Approach */
 .why .grid{display:grid;grid-template-columns:1.05fr 1fr;gap:80px;align-items:start}
 .quote{font:450 clamp(1.9rem,3.4vw,2.7rem)/1.22 var(--serif);color:var(--ink);margin:0;text-wrap:balance}
-.quote em{color:var(--ember-2)}
+.quote em{color:var(--ember-ink)}
 .sig{margin-top:26px;color:var(--muted);font-size:1.02rem}
 .sig b{color:var(--ink)}
 .pillars{list-style:none;margin:0;padding:0}
 .pillars li{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:22px 0;border-top:1px solid var(--line)}
 .pillars li:last-child{border-bottom:1px solid var(--line)}
-.pillars .n{font:italic 500 1.35rem/1.2 var(--serif);color:var(--ember-2)}
+.pillars .n{font:italic 500 1.35rem/1.2 var(--serif);color:var(--ember-ink)}
 .pillars h3{font-size:1.22rem;margin-bottom:4px}
 .pillars p{margin:0;color:var(--muted);font-size:1.02rem}
 
@@ -201,7 +215,7 @@ section{padding:128px 0}
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:36px;position:relative;counter-reset:s}
 .steps::before{content:"";position:absolute;left:0;right:0;top:15px;height:1.5px;background:linear-gradient(90deg,var(--ember-2),#c9b896);transform:scaleX(var(--p,0));transform-origin:left;transition:transform 1.6s cubic-bezier(.2,.7,.2,1)}
 .step{position:relative;padding-top:52px}
-.step::before{counter-increment:s;content:counter(s);position:absolute;top:0;left:0;width:32px;height:32px;border-radius:50%;background:var(--paper-2);border:1.5px solid var(--ember-2);display:grid;place-items:center;font:600 .95rem var(--serif);color:var(--ember-2)}
+.step::before{counter-increment:s;content:counter(s);position:absolute;top:0;left:0;width:32px;height:32px;border-radius:50%;background:var(--paper-2);border:1.5px solid var(--ember-ink);display:grid;place-items:center;font:600 .95rem var(--serif);color:var(--ember-ink)}
 .step h3{font-size:1.3rem;margin-bottom:8px}
 .step p{color:var(--muted);font-size:1.02rem;margin:0}
 
@@ -238,6 +252,7 @@ footer .privacy a{color:var(--cream)}
   .b1{transform:translateX(56vw)}.b2{transform:translateX(61vw)}.b3{transform:translateX(65vw)}
   .anim .reveal{opacity:1;transform:none}
   .steps::before{transform:scaleX(1)}
+  .diagram .spark{display:none}   /* SVG motion, which the rule above can't stop */
 }
 @media (max-width:1060px){
   .head,.thread .grid,.why .grid,.contact .wrap,.work .grid,.work .grid.oc,.get{grid-template-columns:1fr}
@@ -249,7 +264,7 @@ footer .privacy a{color:var(--cream)}
   .pairs-head{display:none}
   .pair{grid-template-columns:1fr;row-gap:6px}
   .pair .to{display:none}
-  .pair .lbl{position:static;width:auto;height:auto;clip:auto;margin:0;font:600 .98rem var(--sans);color:#a85a24}
+  .pair .lbl{position:static;width:auto;height:auto;clip:auto;margin:0;font:600 .98rem var(--sans);color:var(--ember-ink)}
   .steps{grid-template-columns:1fr 1fr;row-gap:44px}
   .steps::before{display:none}
   section{padding:96px 0}
@@ -341,12 +356,12 @@ footer .privacy a{color:var(--cream)}
           <div>
             <div class="kicker">Our Work</div>
             <h2 class="reveal app-title"><img src="images/crane-course-icon.png" width="64" height="64" alt="">Crane Course</h2>
-            <p class="reveal d1 lede2">Our first app is a free golf companion for iPhone, Apple Watch and Android. It shows front, center and back yardages to the green from your device's own Global Positioning System, and keeps working offline once a course is downloaded.</p>
+            <p class="reveal d1 lede2">Our first app is a free golf companion for iPhone, Apple Watch and Android. It shows front, center and back yardages to the green from your device's own location, and keeps working offline once a course is downloaded.</p>
             <ul class="facts reveal d2">
               <li><b>Phone and watch together</b><span>The watch uses its own location, so the phone can stay in the cart.</span></li>
               <li><b>Honest numbers</b><span>Reports location accuracy plainly and hides yardages when you're away from the course.</span></li>
               <li><b>Free, with no account, advertising or tracking</b><span>Nothing to buy or subscribe to. Scores and rounds stay on your phone and watch.</span></li>
-              <li><b>A game while you wait</b><span>The first course of Off Course, our 3D golf game, is built in.</span></li>
+              <li><b>A game while you wait</b><span>Off Course, our 3D golf game, comes with its first course built in.</span></li>
             </ul>
           </div>
           <figure class="phone reveal d1"><img src="images/crane-course-gps.jpg" width="506" height="1100" loading="lazy" alt="Crane Course on iPhone: hole 1 at Lakeside Country Club, with front, center and back yardages over the aerial map"></figure>
@@ -452,8 +467,8 @@ footer .privacy a{color:var(--cream)}
         <p class="reveal d2">We take an app through every step and stay with it afterwards. Choose a step to see what happens there.</p>
       </div>
       <figure class="diagram" id="diagram" style="--len:627;--off:627">
-        <svg viewBox="0 0 640 480" role="group" aria-label="The steps of making an app, joined by one thread"><path class="ghost" d="M48 344C300 354 330 96 600 84"/><g class="links"><path class="link" d="M420 404Q234 408 48 344"/><path class="link" d="M420 404Q298.1 397 176.3 322"/><path class="link" d="M420 404Q346.7 366.1 273.4 260.3"/><path class="link" d="M420 404Q390.8 327.8 361.6 183.6"/><path class="link" d="M420 404Q441.6 294.3 463.1 116.6"/><path class="link" d="M420 404Q510 278 600 84"/></g><path class="path" id="threadPath" d="M48 344C300 354 330 96 600 84"/><g class="us"><circle class="ring" cx="420" cy="404" r="9"/><circle class="core" cx="420" cy="404" r="9"/><text class="t" x="420" y="444" text-anchor="middle">Craneshire</text><text class="s" x="420" y="466" text-anchor="middle">With you at every step</text></g><g class="node" tabindex="0" role="button" aria-pressed="false" data-frac="0.0000" data-title="Idea" data-text="Start with the problem the app should solve and the people who will use it, and agree on what the first version must do well."><circle class="hit" cx="48" cy="344" r="24"/><circle class="dot" cx="48" cy="344" r="8"/><text class="t" x="36" y="384" text-anchor="start">Idea</text></g><g class="node" tabindex="0" role="button" aria-pressed="false" data-frac="0.2092" data-title="Design" data-text="Sketch the screens in plain language and test them early, so the app feels obvious on a small phone and a smaller watch."><circle class="hit" cx="176.3" cy="322" r="24"/><circle class="dot" cx="176.3" cy="322" r="8"/><text class="t" x="176.3" y="300" text-anchor="middle">Design</text></g><g class="node" tabindex="0" role="button" aria-pressed="false" data-frac="0.3934" data-title="Build" data-text="Build natively for each device: SwiftUI for iPhone and Apple Watch, Kotlin and Jetpack Compose for Android and Wear OS."><circle class="hit" cx="273.4" cy="260.3" r="24"/><circle class="dot" cx="273.4" cy="260.3" r="8"/><text class="t" x="253.4" y="254.3" text-anchor="end">Build</text></g><g class="node" tabindex="0" role="button" aria-pressed="false" data-frac="0.5797" data-title="Test" data-text="Test on real phones and watches, outdoors and offline when that matters, with automated tests for the parts that must never break."><circle class="hit" cx="361.6" cy="183.6" r="24"/><circle class="dot" cx="361.6" cy="183.6" r="8"/><text class="t" x="381.6" y="195.6" text-anchor="start">Test</text></g><g class="node" tabindex="0" role="button" aria-pressed="false" data-frac="0.7741" data-title="Launch" data-text="Prepare the App Store and Google Play listings, screenshots and privacy answers, and see the app through review."><circle class="hit" cx="463.1" cy="116.6" r="24"/><circle class="dot" cx="463.1" cy="116.6" r="8"/><text class="t" x="479.1" y="142.6" text-anchor="start">Launch</text></g><g class="node" tabindex="0" role="button" aria-pressed="false" data-frac="1.0000" data-title="Care" data-text="Keep the app working as phones, watches and operating systems change, and fix what users report."><circle class="hit" cx="600" cy="84" r="24"/><circle class="dot" cx="600" cy="84" r="8"/><text class="t" x="610" y="58" text-anchor="end">Care</text></g><circle class="spark" r="4"><animateMotion dur="6s" repeatCount="indefinite"><mpath href="#threadPath"/></animateMotion></circle></svg>
-        <div class="stage" id="stage" aria-live="polite"><h3 id="stageTitle">Idea</h3><p id="stageText">Start with the problem the app should solve and the people who will use it, and agree on what the first version must do well.</p></div>
+        <svg viewBox="0 0 640 480" role="group" aria-label="The steps of making an app, joined by one thread"><path class="ghost" d="M48 344C300 354 330 96 600 84"/><g class="links"><path class="link" d="M420 404Q234 408 48 344"/><path class="link" d="M420 404Q298.1 397 176.3 322"/><path class="link" d="M420 404Q346.7 366.1 273.4 260.3"/><path class="link" d="M420 404Q390.8 327.8 361.6 183.6"/><path class="link" d="M420 404Q441.6 294.3 463.1 116.6"/><path class="link" d="M420 404Q510 278 600 84"/></g><path class="path" id="threadPath" d="M48 344C300 354 330 96 600 84"/><g class="us"><circle class="ring" cx="420" cy="404" r="9"/><circle class="core" cx="420" cy="404" r="9"/><text class="t" x="420" y="444" text-anchor="middle">Craneshire</text><text class="s" x="420" y="466" text-anchor="middle">With you at every step</text></g><g class="node" tabindex="0" role="button" aria-pressed="false" data-frac="0.0000" data-title="Idea" data-text="We start with the problem the app should solve and the people who will use it, and agree on what the first version must do well."><circle class="hit" cx="48" cy="344" r="24"/><circle class="dot" cx="48" cy="344" r="8"/><text class="t" x="36" y="384" text-anchor="start">Idea</text></g><g class="node" tabindex="0" role="button" aria-pressed="false" data-frac="0.2092" data-title="Design" data-text="We sketch the screens in plain language and test them early, so the app feels obvious on a small phone and a smaller watch."><circle class="hit" cx="176.3" cy="322" r="24"/><circle class="dot" cx="176.3" cy="322" r="8"/><text class="t" x="176.3" y="300" text-anchor="middle">Design</text></g><g class="node" tabindex="0" role="button" aria-pressed="false" data-frac="0.3934" data-title="Build" data-text="We build natively for each device, with Apple's own tools for iPhone and Apple Watch and Google's for Android and Wear OS."><circle class="hit" cx="273.4" cy="260.3" r="24"/><circle class="dot" cx="273.4" cy="260.3" r="8"/><text class="t" x="253.4" y="254.3" text-anchor="end">Build</text></g><g class="node" tabindex="0" role="button" aria-pressed="false" data-frac="0.5797" data-title="Test" data-text="We test on real phones and watches, outdoors and offline when that matters, with automated tests for the parts that must never break."><circle class="hit" cx="361.6" cy="183.6" r="24"/><circle class="dot" cx="361.6" cy="183.6" r="8"/><text class="t" x="381.6" y="195.6" text-anchor="start">Test</text></g><g class="node" tabindex="0" role="button" aria-pressed="false" data-frac="0.7741" data-title="Launch" data-text="We prepare the App Store and Google Play listings, screenshots and privacy answers, and see the app through review."><circle class="hit" cx="463.1" cy="116.6" r="24"/><circle class="dot" cx="463.1" cy="116.6" r="8"/><text class="t" x="479.1" y="142.6" text-anchor="start">Launch</text></g><g class="node" tabindex="0" role="button" aria-pressed="false" data-frac="1.0000" data-title="Care" data-text="We keep the app working as phones, watches and operating systems change, and fix what users report."><circle class="hit" cx="600" cy="84" r="24"/><circle class="dot" cx="600" cy="84" r="8"/><text class="t" x="610" y="58" text-anchor="end">Care</text></g><circle class="spark" r="4"><animateMotion dur="6s" repeatCount="indefinite"><mpath href="#threadPath"/></animateMotion></circle></svg>
+        <div class="stage" id="stage"><h3 id="stageTitle">Idea</h3><p id="stageText">We start with the problem the app should solve and the people who will use it, and agree on what the first version must do well.</p></div>
       </figure>
     </div>
   </section>
@@ -562,7 +577,8 @@ const show = i => {
 };
 const stopAuto = () => { clearInterval(timer); timer = null; };
 nodes.forEach((n, k) => {
-  const go = () => { stopAuto(); show(k); };
+  // Announce the step to screen readers only once the visitor chooses one, never while it advances by itself.
+  const go = () => { stopAuto(); stage.setAttribute("aria-live", "polite"); show(k); };
   n.addEventListener("click", go); n.addEventListener("mouseenter", go); n.addEventListener("focus", go);
   n.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } });
 });
