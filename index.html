@@ -132,6 +132,7 @@ section{padding:116px 0}
 .card .plain{color:var(--ink);font-size:1.08rem}
 .card .getrow{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-top:auto;padding-top:8px}
 .card .soon{font-size:1.08rem}
+.card .getrow+.getrow{margin-top:0;padding-top:4px}
 .card .more{font-size:1.08rem}
 .card .more a{color:var(--ink)}
 .qr{margin:0;flex:none}
@@ -344,10 +345,13 @@ footer .privacy a{color:var(--cream)}
             <p>A 3D golf game played on real courses, each rebuilt from public laser elevation surveys, aerial photographs and OpenStreetMap. You play with a swipe, and the first course is free.</p>
             <p class="plain">No account, advertising or tracking. It plays without a signal.</p>
             <div class="getrow">
+              <a class="btn btn-dark" href="https://apps.apple.com/app/id6832392005" aria-label="View Off Course on the App Store">View on the App Store <span class="arr">→</span></a>
+              <figure class="qr"><img src="images/qr-app-store-off-course.svg" width="92" height="92" loading="lazy" alt="QR code linking to Off Course on the App Store"></figure>
+            </div>
+            <div class="getrow">
               <a class="btn btn-dark" href="https://play.google.com/store/apps/details?id=com.craneshire.offcourse" aria-label="View Off Course on Google Play">View on Google Play <span class="arr">→</span></a>
               <figure class="qr"><img src="images/qr-google-play-off-course.svg" width="92" height="92" loading="lazy" alt="QR code linking to Off Course on Google Play"></figure>
             </div>
-            <p class="soon">The iPhone version is in Apple's review now.</p>
             <p class="more"><a href="https://cranecourse.github.io/off-course-support/">Off Course support and privacy</a></p>
           </div>
         </article>
@@ -372,7 +376,7 @@ footer .privacy a{color:var(--cream)}
         <li class="pair"><h3>Maps</h3><p class="done"><span class="lbl">In my apps today: </span>Aerial maps of every hole, downloaded once and ready offline.</p><span class="to" aria-hidden="true">→</span><p class="could"><span class="lbl">In your app: </span>Your farm, campus or event grounds, mapped and in every visitor's pocket.</p></li>
         <li class="pair"><h3>Phone and watch</h3><p class="done"><span class="lbl">In my apps today: </span>The round on your wrist, kept in step with the phone in the cart.</p><span class="to" aria-hidden="true">→</span><p class="could"><span class="lbl">In your app: </span>A checklist, timer or tally on the wrist while your hands are busy.</p></li>
         <li class="pair"><h3>Places in 3D</h3><p class="done"><span class="lbl">In my apps today: </span>Off Course, a game built from real elevation and aerial imagery.</p><span class="to" aria-hidden="true">→</span><p class="could"><span class="lbl">In your app: </span>Your grounds, trail or venue in 3D, built from the same public data.</p></li>
-        <li class="pair"><h3>Both stores</h3><p class="done"><span class="lbl">In my apps today: </span>Crane Course live on the App Store, and Off Course live on Google Play.</p><span class="to" aria-hidden="true">→</span><p class="could"><span class="lbl">In your app: </span>Your app on iPhone and Android, with listings, privacy answers and review handled.</p></li>
+        <li class="pair"><h3>Both stores</h3><p class="done"><span class="lbl">In my apps today: </span>Off Course live on the App Store and Google Play, and Crane Course live on the App Store.</p><span class="to" aria-hidden="true">→</span><p class="could"><span class="lbl">In your app: </span>Your app on iPhone and Android, with listings, privacy answers and review handled.</p></li>
       </ul>
       <div class="think reveal">
         <p>So, what would yours do?</p>
