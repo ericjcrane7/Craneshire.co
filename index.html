@@ -122,9 +122,10 @@ section{padding:104px 0}
 .fine{margin:30px 0 0;font-size:1.07rem;line-height:1.5;color:var(--muted);max-width:44em}
 .after{margin-top:60px}
 .after .btn{margin-top:10px}
-.ideas{list-style:none;margin:0 0 24px;padding:0;border-bottom:1px solid var(--line)}
-.ideas li{padding:15px 0 16px;border-top:1px solid var(--line);color:var(--body)}
-.ideas b{font-weight:600;color:var(--ink)}
+.ideas{margin:0 0 24px;padding:0;border-bottom:1px solid var(--line)}
+.ideas>div{display:grid;grid-template-columns:7.2em 1fr;gap:0 20px;padding:14px 0 15px;border-top:1px solid var(--line)}
+.ideas dt{font-weight:600;color:var(--ink)}
+.ideas dd{margin:0;color:var(--body)}
 
 /* The apps I've already made */
 .made .grid{display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:center;margin-top:46px}
@@ -250,6 +251,7 @@ footer .privacy a{color:var(--cream)}
   .swipe{display:block}
   .tag{padding:7px 11px 8px;margin-bottom:12px}
   .after{margin-top:48px}
+  .ideas>div{grid-template-columns:1fr;padding:12px 0 13px}
   .contact{padding-top:96px}
   .contact .wrap{padding-bottom:200px}
   .hero-copy{padding-bottom:400px}
@@ -345,18 +347,16 @@ footer .privacy a{color:var(--cream)}
           <p>Every hole, with a flyover and a tip from the pro.</p>
         </li>
       </ol>
-      <p class="fine">I drew these four screens for this page. "Your Club" is not a real club. The course pictures in them come from Off Course, my golf game.</p>
+      <p class="fine">I drew these screens for this page. "Your Club" is not a real club.</p>
 
       <div class="col after">
-        <p>Everything on those screens would be the club's own, from the calendar to the name under the icon. A member opens it instead of calling the pro shop.</p>
         <p>It doesn't have to be a golf club.</p>
-        <ul class="ideas">
-          <li>At a <b>marina</b>, the same idea could let a dockhand mark a pontoon ready and the rental desk see it before the next family arrives.</li>
-          <li>At a <b>restaurant</b>, a regular could order the Friday fish fry at lunch and pick it up on the way home.</li>
-          <li>At a <b>campground</b>, a family could book the same site for next July before they pull out, and the office could tell every camper at once when a storm is on the way.</li>
-          <li>At a <b>museum</b>, a visitor could tap the number beside an exhibit and hear its story from the person who restored it.</li>
-        </ul>
-        <p>Whatever goes in the app, the work of getting it built and into the App Store and Google Play is the same, and I have done it twice.</p>
+        <dl class="ideas">
+          <div><dt>Marina</dt><dd>A dockhand could mark a pontoon ready for the rental desk.</dd></div>
+          <div><dt>Restaurant</dt><dd>A regular could order the Friday fish fry and pick it up on the way home.</dd></div>
+          <div><dt>Campground</dt><dd>A family could book the same site for next July before they pull out.</dd></div>
+          <div><dt>Museum</dt><dd>A visitor could tap a number beside an exhibit and hear its story.</dd></div>
+        </dl>
         <a class="btn btn-dark" href="#contact">Email me about your business <span class="arr">→</span></a>
       </div>
     </div>

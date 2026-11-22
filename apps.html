@@ -112,9 +112,10 @@ section{padding:104px 0}
 .fine{margin:30px 0 0;font-size:1.07rem;line-height:1.5;color:var(--muted);max-width:44em}
 .after{margin-top:60px}
 .after .btn{margin-top:10px}
-.ideas{list-style:none;margin:0 0 24px;padding:0;border-bottom:1px solid var(--line)}
-.ideas li{padding:15px 0 16px;border-top:1px solid var(--line);color:var(--body)}
-.ideas b{font-weight:600;color:var(--ink)}
+.ideas{margin:0 0 24px;padding:0;border-bottom:1px solid var(--line)}
+.ideas>div{display:grid;grid-template-columns:7.2em 1fr;gap:0 20px;padding:14px 0 15px;border-top:1px solid var(--line)}
+.ideas dt{font-weight:600;color:var(--ink)}
+.ideas dd{margin:0;color:var(--body)}
 
 /* The apps I've already made */
 .made .grid{display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:center;margin-top:46px}
@@ -240,6 +241,7 @@ footer .privacy a{color:var(--cream)}
   .swipe{display:block}
   .tag{padding:7px 11px 8px;margin-bottom:12px}
   .after{margin-top:48px}
+  .ideas>div{grid-template-columns:1fr;padding:12px 0 13px}
   .contact{padding-top:96px}
   .contact .wrap{padding-bottom:200px}
   .hero-copy{padding-bottom:400px}
