@@ -99,6 +99,8 @@ nav .btn{padding:13px 22px;font-size:.98rem}
 .hero h1{font-size:clamp(2.45rem,4.7vw,4.2rem);font-weight:540;text-shadow:0 2px 24px rgba(10,16,30,.35);text-wrap:balance}
 .hero .lede{font-size:1.26rem;color:var(--cream-2);max-width:29em;margin:26px 0 34px;text-shadow:0 1px 14px rgba(10,16,30,.5);position:relative}
 @media (min-width:1061px){.hero .lede::before{content:"";position:absolute;inset:-64px -250px -90px -180px;z-index:-1;pointer-events:none;background:radial-gradient(closest-side,rgba(29,46,79,.84) 0,rgba(29,46,79,.78) 58%,rgba(29,46,79,.34) 82%,rgba(29,46,79,0) 100%)}}
+.hero .lede:has(+.byline){margin-bottom:14px}
+.byline{margin:0 0 34px;font:600 1.07rem/1.4 var(--sans);letter-spacing:.01em;color:var(--cream);text-shadow:0 1px 14px rgba(10,16,30,.6);position:relative}
 .cta{display:flex;flex-wrap:wrap;gap:14px}
 .golfers{margin:30px 0 0;font-size:1.07rem;color:var(--cream-2);text-shadow:0 1px 14px rgba(10,16,30,.6);position:relative}
 .golfers a{color:var(--cream);font-weight:600;text-underline-offset:3px}
@@ -310,7 +312,8 @@ footer .privacy a{color:var(--cream)}
     <div class="wrap">
       <div class="hero-copy">
         <h1 id="h1">Phone apps for small businesses</h1>
-        <p class="lede">I'm Eric Crane, and I live in Hammondsport, New York. I've developed and published apps of my own. Below is an example of what I could build for you.</p>
+        <p class="lede">Craneshire began with an app I wanted for my own rounds of golf. I took it from a first sketch to the App Store and Google Play, and built this company around it. I can use my passion and experience to help build your app.</p>
+        <p class="byline">Eric Crane, Hammondsport, New York</p>
         <div class="cta">
           <a class="btn btn-ember" href="#example">See the example <span class="arr">↓</span></a>
           <a class="btn btn-ghost" href="#contact">Email me</a>
@@ -414,7 +417,6 @@ footer .privacy a{color:var(--cream)}
           <p>I took Crane Course and Off Course from the first sketch to the App Store and Google Play, and I handle the parts that stop most people: the accounts, the store listings, the privacy forms and the review. I'm the person you talk to from the first conversation to launch day, and after.</p>
           <p>I'm an engineer. I have spent more than 14 years in aerospace, defense and passenger rail, in the United States and France, as an electrical engineer, a systems engineer, a team leader and a software architect. Before that I served four years in the U.S. Air Force as an aircraft loadmaster.</p>
           <p>I have a Master of Science in Systems Engineering from Drexel University and a Bachelor of Science in Electrical Engineering Technology from Alfred State College, and I'm a Certified Systems Engineering Professional.</p>
-          <p>I would most like to work with businesses here in the Finger Lakes, and I take on work from anywhere.</p>
         </div>
       </div>
     </div>
